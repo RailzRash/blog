@@ -1,0 +1,2 @@
+module SkyblogsHelper
+end
