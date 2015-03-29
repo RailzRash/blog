@@ -1,5 +1,8 @@
 <% @skyblogs.each do |skyblog| %>
 
-<%= skyblog.title %>
-<%= skyblog.content %>
+<h1><%= link_to skyblog.title, skyblog %></h1> </br>
+    <p><%=time_ago_in_words(skyblog.created_at) %> ago</p>
+
 <% end %>
+</br>
+<%= link_to "new blog", new_skyblog_path %>

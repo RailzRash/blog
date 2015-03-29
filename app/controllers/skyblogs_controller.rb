@@ -1,5 +1,5 @@
 class SkyblogsController < ApplicationController
-
+ before_action :set_skyblog, only: [:show, :edit, :update, :destroy]
 def index
 	@skyblogs = Skyblog.all
 end
@@ -12,9 +12,9 @@ def new
 end
 
 def create 
-	@skyblog = Skyblog.new(Skyblog_params)
+	@skyblog = Skyblog.new(skyblog_params)
 	@skyblog.save
-	redirect_to root_path
+	redirect_to @skyblog
 end
 
 def update
@@ -26,7 +26,7 @@ end
 private 
 
 def set_skyblog
-
+ @skyblog = Skyblog.find(params[:id])
 end
 
 def skyblog_params
