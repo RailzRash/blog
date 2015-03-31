@@ -12,4 +12,67 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+ *= require welcome.scss
+
  */
+body{
+background: #F8F8F8 ;
+}
+
+h1{
+	font-family: 'Raleway', sans-serif;
+}
+
+
+
+
+
+.top-bar .name h1 a {
+    width: auto;
+    line-height: 45px;
+    font-family: 'Raleway', sans-serif;
+    background: #FFF;
+    color:#000;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+    line-height: 45px;
+    
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+.top-bar {
+    background: none repeat scroll 0% 0% #FFF;
+    overflow: hidden;
+    height: 45px;
+}
+
+.top-bar h1 {
+    background: none repeat scroll 0% 0% #000;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+    padding: 0px 15px;
+    width:150px;
+    background: none repeat scroll 0% 0% #FFF;
+}
+
+
+.top-bar-section ul li > a {
+	color: #0099FF;
+	display: block;
+}
+
+.blog_title{
+margin: 0 0 20px 0;
+text-align: center;
+}
+
+.blogs{
+padding:15px 0;
+border-bottom: 1px solid #EAEAEA;
+text-align: center;
+border-top: 10px solid black;
+}

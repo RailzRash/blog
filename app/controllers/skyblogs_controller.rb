@@ -18,6 +18,8 @@ def create
 end
 
 def update
+	@skyblog.update(skyblog_params)
+    redirect_to @skyblog
 end
 
 def edit

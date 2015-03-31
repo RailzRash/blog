@@ -1,14 +1,46 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Blog</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<%= yield %>
+<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
-</body>
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+     <div class="sticky">
+  <nav class="top-bar" data-topbar role="navigation" data-top`bar data-options="sticky_on: large">
+  <ul class="title-area">
+    <!-- Title Area -->
+    <li class="name">
+      <h1><a href="#">SkyBlog</a></h1>
+    </li>
+    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+
+    <!-- Right Nav Section -->
+
+
+<ul class="left">
+      <li class="divider hide-for-small"></li>
+      <li><a href=""> <%= link_to 'Home', root_path %> </a></li>
+        <li><a href=""><%= link_to 'Blog', skyblogs_path %></a></li>
+    </ul>
+
+ </div>
+  </section>
+</nav>
+    <%= yield %>
+
+  </body>
 </html>
