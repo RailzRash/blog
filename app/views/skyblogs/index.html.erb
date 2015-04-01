@@ -1,11 +1,18 @@
 <div class = "blog_title">
+<div class = "row">
+	<div class = "large-12 columns">
+	
 <% @skyblogs.each do |skyblog| %>
+	<div class = "panel">
 
 <h1><%= link_to skyblog.title, skyblog %></h1> </br>
+<p><%= skyblog.description %></p> 
     <p><%=time_ago_in_words(skyblog.created_at) %> ago</p>
-
+</div>
 <% end %>
 
+</div>
+</div>
 </div>
 </br>
 <%= link_to "create blog", new_skyblog_path %>

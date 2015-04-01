@@ -25,6 +25,11 @@ end
 def edit
 end
 
+def destroy 
+	@skyblog.destroy
+	redirect_to skyblogs_path
+end
+
 private 
 
 def set_skyblog
@@ -32,7 +37,7 @@ def set_skyblog
 end
 
 def skyblog_params
-	params.require(:skyblog).permit(:title, :content)
+	params.require(:skyblog).permit(:title, :content, :image, :description)
 end
 
 end

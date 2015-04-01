@@ -2,11 +2,17 @@
 <div class = "blogs">
 	<div class = "row">
 <h1><%= @skyblog.title %></h1> </br>
+<div class = "large-12 columns>">
 <%= @skyblog.content %>
+<%= @skyblog.description %>
+</div>
+<%= image_tag @skyblog.image.url(:medium) %>
 
 </br>
 <%= link_to "Back", skyblogs_path %>
 <%= link_to "Edit", edit_skyblog_path %>
-<%= link_to "Delete" %>
+<%= link_to "Delete", skyblog_path(@skyblog), method: :delete, data: { confirm: "Are you sure?"}%>
+
+
 </div>
 </div>
