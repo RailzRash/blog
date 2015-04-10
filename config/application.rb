@@ -8,6 +8,16 @@ Bundler.require(*Rails.groups)
 
 module Blog
   class Application < Rails::Application
+    
+
+    # Date
+# ----------------------------
+Date::DATE_FORMATS[:default] = "%e/%B/%Y" 
+
+# DateTime / Time
+# ----------------------------
+Time::DATE_FORMATS[:default] = " %I:%M %p" 
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

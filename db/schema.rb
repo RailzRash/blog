@@ -11,13 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150331233933) do
+ActiveRecord::Schema.define(version: 20150410030353) do
 
   create_table "comments", force: true do |t|
-    t.string   "name"
     t.text     "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
+  end
+
+  add_index "comments", ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type"
+
+  create_table "events", force: true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.date     "date"
+    t.datetime "time"
   end
 
   create_table "skyblogs", force: true do |t|

@@ -1,0 +1,35 @@
+<div class = "row">
+  <div class = "large-12 columns  text-center">
+<h1 > Events</h1>
+</div>
+</div>
+
+
+<div class = "row">
+    <% @events.each do |event| %>
+     
+        <h2><%= event.title %></h2>
+        <h5><%= event.content %></h5>
+
+<div class = "row">
+        <div class = "large-6 columns">
+        <h5><%= event.date %></h5>
+      </div>
+<div class = "large-3 columns">
+        <h5><%= event.time %></h5>
+     </div>
+</div>
+        <div class = "row">
+        <p><%= link_to 'Show', event %>|<%= link_to 'Edit', edit_event_path(event) %>|<%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      </div>
+      
+    <% end %>
+
+
+
+<br>
+
+
+
+<%= link_to 'New Event', new_event_path %>
+</div>
