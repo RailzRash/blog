@@ -1,0 +1,19 @@
+<h1>Add a Comment</h1>
+<%= form_for [@commentable, @comment] do |f| %>
+<% if @comment.errors.any? %>
+<h2>Please correct teh following errors</h2>
+<ul>
+	<% comment.errors.full_messages.each do |msg| %>
+	<li><%=msg %></li>
+	<% end %>
+</ul>
+<% end %>
+<div class = "row">
+	<div class = "large-4 columns" >
+	<%=  f.text_area :comment, rows: 8 %>
+</div>
+</div>
+
+<%= f.submit %>
+
+<% end %>

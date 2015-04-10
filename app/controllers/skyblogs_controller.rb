@@ -5,6 +5,9 @@ def index
 end
 
 def show
+	@commentable = @skyblog
+	@comments = @commentable.comments
+	@comment = Comment.new
 end
 
 def new
