@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  resources :events
+resources :events do
+	resources :comments 
+end
 
-resources :skyblogs
+resources :skyblogs do 
+	resources :comments
+end
+
 root "welcome#index"
 end

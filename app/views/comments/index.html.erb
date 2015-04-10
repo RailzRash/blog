@@ -1,0 +1,10 @@
+<h1>Comments</h1>
+
+
+<div class = "row">
+	<% @comments.each do |comment| %>
+	<div class = "panel">
+	<%= simple_format comment.comment %>
+</div>
+	<% end %>
+</div>
